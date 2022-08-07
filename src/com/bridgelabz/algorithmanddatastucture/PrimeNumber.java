@@ -25,10 +25,10 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
 
-        PrimeNumber pn = new PrimeNumber();
+        PrimeNumber primeNumber = new PrimeNumber();
 
         System.out.println("Prime numbers from 1 to 1000 are :");
-        pn.printPrime();
+        primeNumber.printPrime();
     }
 
 }
