@@ -21,6 +21,7 @@ public class PrimeNumber {
 //                System.out.print(j + " ");
                   primeNumbers[k] =  j;
                   k++;
+                  PrimePalindromeAndAnagram.isPalindrome(j);
             }
         }
         return primeNumbers;
@@ -37,6 +38,11 @@ public class PrimeNumber {
         for(int i=0; i<primeNumbers.length; i++){
             System.out.print(primeNumbers[i]+" ");
         }
+        System.out.println();
+        PrimePalindromeAndAnagram primePalindromeAndAnagram = new PrimePalindromeAndAnagram();
+        primePalindromeAndAnagram.displayPalindromes();
+        primePalindromeAndAnagram.anagram(primeNumbers);
+
     }
 
 }
