@@ -1,34 +1,33 @@
 package com.bridgelabz.algorithmanddatastucture;
 import java.util.Arrays;
-public class BubbleSort {
 
-    public int[] bubbleSort(int[] array) {
+
+public class BubbleSort{
+
+    public <T> void bubbleSort(T[] array) {
         int size = array.length;
 
-        for (int i = 0; i < size - 1; i++)
-            for (int j = 0; j < size - i - 1; j++)
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
 
-                if (array[j] > array[j + 1]) {
+                T firstElement = array[j];
 
-                    int temp = array[j];
+                if (array[j].toString().compareTo(array[j + 1].toString()) > 0) {
+
+                    T temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                 }
-        return array;
+
+            }
+        }
+            System.out.println();
+            System.out.println("Array after bubble sort:");
+
+            for(int i=0; i<array.length; i++)
+                System.out.print(array[i]+" ");
+
     }
 
-    public static void main(String args[]) {
 
-        BubbleSort bs = new BubbleSort();
-
-        int[] arr = { 9,7,0,44,-73,8 };
-
-        System.out.println("Array :");
-        System.out.println(Arrays.toString(arr));
-
-        int[] sortedArray=bs.bubbleSort(arr);
-
-        System.out.println("Array after bubble sort:");
-        System.out.println(Arrays.toString(sortedArray));
-    }
 }
