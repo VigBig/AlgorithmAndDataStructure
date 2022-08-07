@@ -2,9 +2,11 @@ package com.bridgelabz.algorithmanddatastucture;
 
 public class PrimeNumber {
 
-    public void printPrime(){
+    public int[] printPrime(){
         int i,count;
+        int[] primeNumbers = new int[168];
 
+        int k=0;
         for(int j=2;j<=1000;j++)
         {
             count=0;
@@ -16,10 +18,12 @@ public class PrimeNumber {
                 }
             }
             if(count==2) {
-                System.out.print(j + " ");
-
+//                System.out.print(j + " ");
+                  primeNumbers[k] =  j;
+                  k++;
             }
         }
+        return primeNumbers;
     }
 
 
@@ -28,7 +32,11 @@ public class PrimeNumber {
         PrimeNumber primeNumber = new PrimeNumber();
 
         System.out.println("Prime numbers from 1 to 1000 are :");
-        primeNumber.printPrime();
+        int[] primeNumbers = primeNumber.printPrime();
+
+        for(int i=0; i<primeNumbers.length; i++){
+            System.out.print(primeNumbers[i]+" ");
+        }
     }
 
 }
